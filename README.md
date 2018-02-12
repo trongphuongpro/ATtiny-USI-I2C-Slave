@@ -3,7 +3,7 @@ Using the USI module as a I2C slave.
 
 ## Usage & API
 - The core of the library is interrupt driven and therefore “runs in parallel” to the other processes in the application.
-- include the library to main program:
+- Include the library to main program:
 ```C 
 #include <USI-I2C-slave.h>
 ```
