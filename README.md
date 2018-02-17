@@ -9,6 +9,7 @@ Using the USI module as a I2C slave.
 ```
 - **void USI_I2C_slave_init(uint8_t address)** - Initialize the I2C slave device.
   - address - Slave's address.
+- **void flushRecBuffer()** - Flush the Receiver Buffer.
 - **recBuffer[BUFFERSIZE]** - receive buffer.
 - **tranBuffer[BUFFERSZIE]** - transmit buffer.
 - **recCount** - receive buffer counter.
