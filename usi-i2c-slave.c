@@ -101,7 +101,6 @@ ISR(USI_OVERFLOW_vect) {
 							}
 							else {
 								SEND_NACK();
-								INIT_START_CONDITION_MODE();
 							}
 							break;
 							
