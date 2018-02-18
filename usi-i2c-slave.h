@@ -56,7 +56,7 @@ void USI_I2C_slave_init(uint8_t);
 
 #define INIT_START_CONDITION_MODE() {							\
 	/* Start Condition Interrupt Enable, External, positive edge; shift data by External, Both Edges */ \
-	USICR = (1 << USISIE) | (1 << USIWM1) | (0 << USIWM0) | (1 << USICS1);		\
+	USICR = (1 << USISIE) | (1 << USIWM1) | (1 << USIWM0) | (1 << USICS1);		\
 	/* clear Interrupt Flags and Counter. */					\
 	USISR = (1 << USIOIF) | (1 << USIPF) | (1 << USIDC);		\
 }
@@ -72,7 +72,7 @@ void USI_I2C_slave_init(uint8_t);
 #define SEND_NACK() { 											\
 	/* release SDA */ 											\
 	USI_DDR |= (1 << USI_SDA); 									\
-	releaseSDA;													\
+	releaseSDA();													\
 	/* 1-bit counter for ACK */ 								\
 	USISR = (1 << USIOIF) | (1 << USIPF) | (1 << USIDC) | 0x0E; \
 }									
