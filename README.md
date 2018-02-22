@@ -13,6 +13,6 @@ Using the USI module as a I2C slave.
 - **tranBuffer[BUFFERSZIE]** - transmit buffer.
 - **recCount** - receive buffer counter.
 - **tranCount** - transmit buffer counter.
-# Notes
+## Notes
 - Master Transmitter Mode works properly.
 - Master Receiver Mode isn't tested.
