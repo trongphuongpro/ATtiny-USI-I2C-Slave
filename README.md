@@ -15,6 +15,6 @@ Using the USI module as a I2C slave.
 - **tranCount** - transmit buffer counter.
 ## Notes
 - Master Transmitter Mode works properly.
-- Master Receiver Mode isn't tested.
+- Master Receiver Mode never has been tested.
 
 [Writting in Github](https://help.github.com/categories/writing-on-github/)
