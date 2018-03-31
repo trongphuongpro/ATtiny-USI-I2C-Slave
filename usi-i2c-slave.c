@@ -49,6 +49,7 @@ ISR(USI_START_vect) {
 	while ((USI_PIN & (1 << USI_SCL)) && !(USI_PIN & (1 << USI_SDA)));
 	
 	// if STOP condition occurred
+	if (USI_PIN & (1 << USI_SCL)) {
 		USICR = (1 << USISIE) | (1 << USIWM1) | (1 << USICS1);
 		comState = STOP;
 	}
